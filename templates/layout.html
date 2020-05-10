@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+  <header><a href="{{ url_for('index') }}">Index</a></header>
+  <h1>{% block page_heading %}{% endblock %}</h1>
+  {% block content %}sdfsdfs{% endblock %}
+  {% block footer %}{% endblock %}
+</body>
+</html>
