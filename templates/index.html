@@ -1,4 +1,15 @@
 {% extends 'layout.html' %}
 {% block title %}Mini Blog{% endblock %}
 {% block page_heading %}Welcome to Miniblog{% endblock %}
-{% block content %}Welcome message!{% endblock %}
+{% block content %}
+<h3 class="card-title">Latest Articles</h3>
+{% for heading in headings %}
+  <div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="{{ url_for(heading.url) }}" class="card-link">
+              {{ heading.title }}</a></li>
+      </ul>
+  </div>
+{% endfor %}
+
+{% endblock %}
