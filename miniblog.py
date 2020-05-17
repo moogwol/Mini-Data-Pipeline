@@ -13,7 +13,7 @@ headings = [{'title': 'Local Mountain Bike Routes', 'url': 'routes'},
 
 @app.route('/')
 def index():
-    t.track_page_view(page_url='http://127.0.0.1:5000/',  page_title='Index page')
+    # t.track_page_view(page_url='http://127.0.0.1:5000/',  page_title='Index page')
     return render_template('index.html', headings=headings)
 
 @app.route('/user/<username>')
@@ -31,15 +31,15 @@ def page_not_found(error):
 
 @app.route('/routes')
 def routes():
-    t.track_page_view(page_url='http://127.0.0.1:5000/routes' ,page_title='Local Mountain Biking Routes')
+    # t.track_page_view(page_url='http://127.0.0.1:5000/routes' ,page_title='Local Mountain Biking Routes')
     return render_template('routes.html')
 
 @app.route('/cat-tree')
 def cat_tree():
-    t.track_page_view(page_url='http://127.0.0.1:5000/cat-tree' ,page_title='Cat stuck up tree')
+    # t.track_page_view(page_url='http://127.0.0.1:5000/cat-tree' ,page_title='Cat stuck up tree')
     return render_template('cat-tree.html')
 
 @app.route('/ice-man')
 def ice_man():
-    t.track_page_view(page_url='http://127.0.0.1:5000/ice-man' ,page_title='Man Enjoys Ice Cream')
+    # t.track_page_view(page_url='http://127.0.0.1:5000/ice-man' ,page_title='Man Enjoys Ice Cream')
     return render_template('ice-man.html')
